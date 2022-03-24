@@ -58,6 +58,7 @@ input{
 }
 .billettes div{
     margin: 20px;
+    text-align:center;
 }
 
 .valor-total{
@@ -75,7 +76,7 @@ h4{
 }
 h3{
     line-height: 150px;
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -94,12 +95,16 @@ h3{
     border: 2px solid rgba(94, 157, 11, 0.473);
     background: transparent;
     color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    transition: all 0.3s;
 }
 
 .btns button:hover{
     cursor: pointer;
     background: rgba(94, 157, 11, 0.473);
     border: 2px solid #272e47;
+    color: #272e47;
 }
 
 .footer {

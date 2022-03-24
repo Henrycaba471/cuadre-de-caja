@@ -29,7 +29,45 @@ console.log(billtesDeCien.value);
 //Configuramos el boton de hacer el CONTEO
 let valores = [];
 function hacerConteo() {
+    //Validacion para cuando se ingresa un valor negativo manual
+    if (billtesDeCien.value < 0) {
+        return alert("Has insertado valores negativos en los billetes de 100");
+    }
+    if (billetesDeCincuenta.value < 0) {
+        return alert("Has insertado valores negativos en los billetes de 50");
+    }
+    if (billtesDeVeinte.value < 0) {
+        return alert("Has insertado valores negativos en los billetes de 20");
+    }
+    if (billetesDeDiez.value < 0) {
+        return alert("Has insertado valores negativos en los billetes de 10");
+    }
+    if (billetesDeCinco.value < 0) {
+        return alert("Has insertado valores negativos en los billetes de 5");
+    }
+    if (billetesDeDos.value < 0) {
+        return alert("Has insertado valores negativos en los billetes de 2");
+    }
+    if (billetesDeUno.value < 0) {
+        return alert("Has insertado valores negativos en los billetes de 1");
+    }
+    if (monedasDeMil.value < 0) {
+        return alert("Has insertado valores negativos en las monedas de mil");
+    }
+    if (monedasDeQuinientos.value < 0) {
+        return alert("Has insertado valores negativos en las monedas de 500");
+    }
+    if (monedasDeDoscientos.value < 0) {
+        return alert("Has insertado valores negativos en las monedas de 200");
+    }
+    if (monedasDeCien.value < 0) {
+        return alert("Has insertado valores negativos en las monedas de 100");
+    }
+    if (monedasDeCincuenta.value < 0) {
+        return alert("Has insertado valores negativos en las monedas de 50");
+    }
 
+    // Validacion cuando se ha insertado cantidad de billestes
     if (billtesDeCien.value > 0) {
         valores.push(billtesDeCien.value * 100000);
     }
@@ -83,18 +121,18 @@ contarDinero.addEventListener("click", hacerConteo);
 
 //Boton de borrar configurado
 borrar.addEventListener("click", function () {
-    billtesDeCien.value = 0;
-    billetesDeCincuenta.value = 0;
-    billtesDeVeinte.value = 0;
-    billetesDeDiez.value = 0;
-    billetesDeCinco.value = 0;
-    billetesDeDos.value = 0;
-    billetesDeUno.value = 0;
-    monedasDeMil.value = 0;
-    monedasDeQuinientos.value = 0;
-    monedasDeDoscientos.value = 0;
-    monedasDeCien.value = 0;
-    monedasDeCincuenta.value = 0;
+    billtesDeCien.value = "";
+    billetesDeCincuenta.value = "";
+    billtesDeVeinte.value = "";
+    billetesDeDiez.value = "";
+    billetesDeCinco.value = "";
+    billetesDeDos.value = "";
+    billetesDeUno.value = "";
+    monedasDeMil.value = "";
+    monedasDeQuinientos.value = "";
+    monedasDeDoscientos.value = "";
+    monedasDeCien.value = "";
+    monedasDeCincuenta.value = "";
     dineroEnCaja.textContent = "$ 0";
     valores = [];
     contarDinero.disabled = false;
