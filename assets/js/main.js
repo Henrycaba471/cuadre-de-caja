@@ -19,8 +19,7 @@ let billtesDeCien = d.getElementById("de-cien-billete"),
 
 //Traemos los botones
 const borrar = d.getElementById("borrar"),
-    contarDinero = d.getElementById("calcular-total"),
-    salir = d.getElementById("salir");
+    contarDinero = d.getElementById("calcular-total");
 
 console.log(contarDinero);
 
@@ -136,8 +135,4 @@ borrar.addEventListener("click", function () {
     dineroEnCaja.textContent = "$ 0";
     valores = [];
     contarDinero.disabled = false;
-});
-
-salir.addEventListener("click", function(){
-    window.close();
 });

@@ -1,98 +1,140 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-*::after, *::before {
+
+*::after,
+*::before {
     box-sizing: inherit;
 }
 
 body {
-    background-color: #1B1D24;
+    background-image: url("../img/icons/bg.jpg");
     color: #fff;
-    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.title{
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 10px;
-    background-color: rgba(94, 157, 11, 0.473);
-    border-radius: 10px;
+header {
+    background-color: rgba(40, 186, 206, 0.568);
 }
 
-.contenedor{
+.bg-color {
+    background-color: #1d3d4986;
+}
+
+.title {
+    margin-left: 100px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-bottom: 20px;
+}
+
+.title:hover {
+    cursor: pointer;
+    color: #dfd9d9;
+}
+
+.contenedor {
     min-height: calc(100vh - 140px);
 }
 
-label, input{
-    display: block
+label,
+input {
+    display: block;
 }
 
-label{
+label {
     color: #ffffff;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
 }
 
-input{
-    border: 2px solid rgba(94, 157, 11, 0.473);
-    border-radius: 20px;
-    font-size: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 200px;
+input {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    font-size: 25px;
+    padding-left: 5px;
+    width: 150px;
     background: transparent;
     color: #fff;
     outline: none;
+    font-family: monospace;
 }
 
-
-.billettes{
+.billettes,
+.monedas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.billettes div img{
-    border-radius: 0 20px;
-}
-.billettes div{
-    margin: 10px;
-    text-align:center;
-}
-
-.valor-total{
-    height: 150px;
-    width: 400px;
-    border: 2px solid rgba(94, 157, 11, 0.473);
-    border-radius: 20px;
+.monedas div {
+    margin: 0 10px;
     text-align: center;
 }
 
-h4{
-    line-height: 180px;
-    font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-h3{
-    line-height: 150px;
-    font-size: 35px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.billettes div img {
+    border-radius: 3px 15px;
 }
 
-.btns{
+.billettes div {
+    margin: 10px;
+    text-align: center;
+}
+
+.arqueo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.caja-menor,
+.vales-saldo,
+.sistema-saldo,
+.balance-final {
+    min-width: 250px;
+    border: 1px solid #ffffff;
+    font-size: 35px;
+    border-radius: 7px;
+    padding: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h4 {
+    font-size: 25px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h3 {
+    font-size: 35px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    flex-direction: column ;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btns {
     display: flex;
     justify-content: center;
     margin-top: 30px;
     flex-wrap: wrap;
 }
-.btns button{
+
+.btns button {
     margin: 15px;
-    font-size: 27px;
-    padding: 20px;
-    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 7px;
     outline: none;
-    border: 2px solid rgba(94, 157, 11, 0.473);
+    border: 2px solid rgba(40, 186, 206, 0.568);
     background: transparent;
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -100,15 +142,15 @@ h3{
     transition: all 0.3s;
 }
 
-.btns button:hover{
+.btns button:hover {
     cursor: pointer;
-    background: rgba(94, 157, 11, 0.473);
-    border: 2px solid #272e47;
-    color: #272e47;
+    background: rgba(40, 186, 206, 0.568);
+    border: 2px solid #ffffff;
+    color: #23346e;
 }
 
 .footer {
-    background-color: rgba(94, 157, 11, 0.473);
+    background-color: rgba(40, 186, 206, 0.568);
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -116,5 +158,27 @@ h3{
     padding-right: 50px;
     font-size: 20px;
     font-family: monospace;
-    border-radius: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+.uno, .dos{
+    position: absolute;
+    margin-top: 35px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.vales-saldo,
+.sistema-saldo {
+    margin-left: 25px;
 }
