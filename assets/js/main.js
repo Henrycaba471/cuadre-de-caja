@@ -14,16 +14,20 @@ let billtesDeCien = d.getElementById("de-cien-billete"),
     monedasDeDoscientos = d.getElementById("de-doscientos"),
     monedasDeCien = d.getElementById("de-cien-moneda"),
     monedasDeCincuenta = d.getElementById("de-cincuenta-moneda"),
-    dineroEnCaja = d.getElementById("dinero-en-caja");
+    dineroEnCaja = d.getElementById("dinero-en-caja"),
+    vales = d.getElementById('vales'),
+    sistema = d.getElementById('sistema'),
+    balance = d.getElementById('balance');
 
 
 //Traemos los botones
 const borrar = d.getElementById("borrar"),
     contarDinero = d.getElementById("calcular-total");
 
-console.log(contarDinero);
+//console.log(contarDinero);
 
-console.log(billtesDeCien.value);
+//console.log(billtesDeCien.value);
+
 
 //Configuramos el boton de hacer el CONTEO
 let valores = [];
@@ -108,11 +112,31 @@ function hacerConteo() {
         style: 'currency',
         currency: 'COP',
         minimumFractionDigits: 0
-    })
+    });
 
-    dineroEnCaja.textContent = formatterPeso.format(total);
     contarDinero.disabled = false;
     valores = [];
+    //vales.value = formatterPeso.format(vales.value);
+    const cajaClean = dineroEnCaja.textContent.split(/[$.]/).join('').trim();
+    const valesClean = vales.value.split(/[$.]/).join('').trim();
+    const sistemaClean = sistema.value.split(/[$.]/).join('').trim();
+    const totalClean = total.toString().split(/[$.]/).join('').trim();
+
+    let cuadre = (parseInt(valesClean) + parseInt(totalClean) - parseInt(sistemaClean));
+
+    balance.textContent = cuadre;
+    if(cuadre < 0) {
+        balance.style.color = 'red';
+    } else {
+        balance.style.color = 'yellow';
+    }
+    let balanceClean = balance.textContent.split(/[$.]/).join('').trim();
+
+    dineroEnCaja.textContent = formatterPeso.format(total);
+    vales.value = formatterPeso.format(valesClean)
+    sistema.value = formatterPeso.format(sistemaClean);
+    balance.textContent = formatterPeso.format(balanceClean);
+    //console.log(valesClean);
 }
 
 
@@ -132,7 +156,18 @@ borrar.addEventListener("click", function () {
     monedasDeDoscientos.value = "";
     monedasDeCien.value = "";
     monedasDeCincuenta.value = "";
-    dineroEnCaja.textContent = "$ 0";
+    dineroEnCaja.textContent = "0";
+    balance.textContent = "0";
+    vales.value = "0";
+    sistema.value = "0";
     valores = [];
     contarDinero.disabled = false;
 });
+
+function validarInput(event) {
+    const input = event.target;
+    const valor = input.value;
+
+    // Reemplazamos cualquier caracter no numérico por una cadena vacía.
+    input.value = valor.replace(/\D/g, '');
+}
