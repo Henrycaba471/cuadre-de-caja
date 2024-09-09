@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/transfer.css">
+    <title>Envió de transferencia</title>
+</head>
+
+<body>
+    <div class="bg-color">
+        <header class="header">
+            <div>
+                <h1 class="title">Envió de transferencia</h1>
+            </div>
+            <div>
+                <a href="index.html">Cuadre de caja</a>
+            </div>
+        </header>
+        <div class="contenedor">
+            <form id="datos-envio">
+                <h3>Transferencias a Venezuela</h3>
+                <div>
+                    <label for="banco">Banco:</label>
+                    <input type="text" id="banco" placeholder="Entidad bancaria">
+                </div>
+                <div>
+                    <label for="cuenta">N° Cuenta:</label>
+                    <input type="text" id="cuenta" placeholder="Numero de cuenta">
+                </div>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Nombre del cliente">
+                </div>
+                <div>
+                    <label for="documento">Documento:</label>
+                    <input type="number" id="cedula" placeholder="Cédula del cliente">
+                </div>
+                <div>
+                    <label for="valor">Valor: B$</label>
+                    <input type="number" id="valor" placeholder="Valor en soberanos">
+                </div>
+                <p>Representante: Jose T Garcia</p>
+                <p>WhatsApp: 3124824321</p>
+            </form>
+            <div>
+                <button type="button" id="print">Imprimir</button>
+                <button type="button" id="cancel">Cancelar</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Desarrollador: Henry Cañizares</p>
+        </footer>
+    </div>
+    <script src="./assets/js/transfers.js"></script>
+</body>
+</html>
