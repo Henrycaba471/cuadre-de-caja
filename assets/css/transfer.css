@@ -22,17 +22,19 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(20, 42, 245);
+    background-color: #EDE5A6;
     padding: 10px 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #592941;
 }
 header h1{
     text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 header a {
     text-decoration: none;
-    color: #ffff;
-    border: 2px solid #fff;
+    color: #592941;
+    border: 2px solid #592941;
     padding: 10px;
     border-radius: 7px;
     transition: all 0.5s ease-in-out;
@@ -41,18 +43,18 @@ header a {
 }
 
 header a:hover {
-    color: rgb(20, 42, 245);
-    border: 2px solid #fff;
-    background-color: #fff;
+    color: #EDE5A6;
+    border: 2px solid #592941af;
+    background-color: #592941;
     text-decoration: underline;
 }
 
 .bg-color {
-    background-color: #1d3d4996;
+    background-color: #592941ee;
 }
 
 .contenedor {
-    min-height: calc(100vh - 99px);
+    min-height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,23 +63,25 @@ header a:hover {
 .contenedor div button{
     font-size: 25px;
     margin: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #592941;
     border-radius: 7px;
-    background-color: rgba(4, 27, 240, 0.856);
+    background-color: #EDE5A6;
     padding: 7px 15px;
-    color: #fff;
+    color: #592941;
     transition: all 0.5s ease-in-out;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    width: 170px;
 }
 .contenedor div button:hover{
     cursor: pointer;
     font-size: 25px;
-    border: 2px solid rgba(4, 27, 240, 0.856);
-    background-color: #ffffff;
-    color: rgba(4, 27, 240, 0.856);
+    border: 2px solid #EDE5A6;
+    background-color: #592941;
+    color: #EDE5A6;
 }
 form{
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #EDE5A6;
     border-radius: 15px;
     padding: 20px;
     display: flex;
@@ -86,13 +90,17 @@ form{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: rgba(4, 27, 240, 0.856);
+    background-color: #592941da;
+    color: #EDE5A6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 form h3{
     font-size: 25px;
+    text-transform: uppercase;
 }
 form p{
     font-size: 20px;
+    text-transform: uppercase;
 }
 form div{
     display: flex;
@@ -101,8 +109,8 @@ form div{
 }
 label {
     display: inline-block;
-    color: #ffffff;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #EDE5A6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
     width: 150px;
     font-size: 18px;
@@ -110,7 +118,7 @@ label {
     padding: 5px;
 }
 
-input {
+input, select {
     display: inline-block;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 7px;
@@ -123,9 +131,15 @@ input {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
 }
+option{
+    background-color: #592941;
+}
+span{
+    color: #ff0000;
+}
 
 .footer {
-    background-color: rgb(20, 42, 245);
+    background-color: #EDE5A6;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -133,6 +147,7 @@ input {
     padding-right: 50px;
     font-size: 20px;
     font-family: monospace;
+    color: #592941;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

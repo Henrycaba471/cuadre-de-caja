@@ -23,26 +23,35 @@
             <form id="datos-envio">
                 <h3>Transferencias a Venezuela</h3>
                 <div>
-                    <label for="banco">Banco:</label>
-                    <input type="text" id="banco" placeholder="Entidad bancaria" required>
+                    <label for="banco">Banco: <span>*</span></label>
+                    <input type="text" id="banco" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');" placeholder="Entidad Bancaria" required>
                 </div>
                 <div>
-                    <label for="cuenta">N° Cuenta:</label>
-                    <input type="text" id="cuenta" placeholder="Numero de cuenta" required>
+                    <label for="tipoCuenta">Tipo cuenta:</label>
+                    <select name="" id="cuenta-tipo">
+                        <option value=""></option>
+                        <option value="AHORRO">AHORRO</option>
+                        <option value="PAGO MOVIL">PAGO MOVIL</option>
+                        <option value="CORRIENTE">CORRIENTE</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cuenta">N° Cuenta: <span>*</span></label>
+                    <input type="text" id="cuenta" oninput="this.value = this.value.replace(/[^0-9\-]/g, '');" placeholder="Numero de cuenta" required>
                 </div>
                 <div>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" placeholder="Nombre del cliente" required>
                 </div>
                 <div>
-                    <label for="documento">Documento:</label>
+                    <label for="documento">Documento: <span>*</span></label>
                     <input type="number" id="cedula" placeholder="Cédula del cliente" required>
                 </div>
                 <div>
-                    <label for="valor">Valor: B$</label>
+                    <label for="valor">Valor: B$ <span>*</span></label>
                     <input type="number" id="valor" placeholder="Valor en soberanos" required>
                 </div>
-                <p>Representante: Jose T Garcia</p>
+                <p>Representante: Jose Trinidad Garcia</p>
                 <p>WhatsApp: 3124824321</p>
             </form>
             <div>
