@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     btnPrint.addEventListener('click', () =>{
 
         if(entidadBamcaria.value === '' || numeroCuenta.value === '' || nombre.value === '' || cedula.value === '' || valorSoberanos.value === '') {
-            alert('Hay campos vacios');
+            alert('LOS CAMPOS CON * SON OBLIGATORIOS');
             return
         }
 
