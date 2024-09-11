@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     btnPrint.addEventListener('click', () =>{
 
-        if(entidadBamcaria.value === '' || numeroCuenta.value === '' || nombre.value === '' || cedula.value === '' || valorSoberanos.value === '') {
+        if(entidadBamcaria.value === '' || numeroCuenta.value === '' || cedula.value === '' || valorSoberanos.value === '') {
             alert('LOS CAMPOS CON * SON OBLIGATORIOS');
             return
         }
