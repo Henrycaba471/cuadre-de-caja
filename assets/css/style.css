@@ -23,8 +23,9 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(20, 42, 245);
-    padding: 10px 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 20px;
+    gap: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 header a {
@@ -46,7 +47,7 @@ header a:hover {
 }
 
 .bg-color {
-    background-color: #1d3d4996;
+    background-color: #1d3449de;
 }
 
 .contenedor {

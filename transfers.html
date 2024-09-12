@@ -41,15 +41,15 @@
                 </div>
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" placeholder="Nombre del cliente" required>
+                    <input type="text" id="nombre" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');" placeholder="Nombre del cliente" required>
                 </div>
                 <div>
                     <label for="documento">Documento: <span>*</span></label>
-                    <input type="number" id="cedula" placeholder="Cédula del cliente" required>
+                    <input type="number" id="cedula" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="Cédula del cliente" required>
                 </div>
                 <div>
                     <label for="valor">Valor: B$ <span>*</span></label>
-                    <input type="number" id="valor" placeholder="Valor en soberanos" required>
+                    <input type="text" id="valor" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="Valor en soberanos" required>
                 </div>
                 <p>Representante: Jose Trinidad Garcia</p>
                 <p>WhatsApp: 3124824321</p>

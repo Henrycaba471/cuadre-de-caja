@@ -11,10 +11,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     btnPrint.addEventListener('click', () =>{
 
-        if(entidadBamcaria.value === '' || numeroCuenta.value === '' || nombre.value === '' || cedula.value === '' || valorSoberanos.value === '') {
-            alert('Hay campos vacios');
+        if(entidadBamcaria.value === '' || numeroCuenta.value === '' || cedula.value === '' || valorSoberanos.value === '') {
+            alert('LOS CAMPOS CON * SON OBLIGATORIOS');
             return
         }
+
+        numeroCuenta.value = numeroCuenta.value.replace(/-/g, '');
+        numeroCuenta.value = numeroCuenta.value.match(/.{1,4}/g).join('-');
+
 
         const contenido = `
         <style>

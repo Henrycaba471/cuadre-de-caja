@@ -26,6 +26,7 @@ header {
     padding: 10px 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #592941;
+    gap: 20PX;
 }
 header h1{
     text-transform: uppercase;
@@ -81,6 +82,7 @@ header a:hover {
     color: #EDE5A6;
 }
 form{
+    margin-top: 20px;
     border: 2px solid #EDE5A6;
     border-radius: 15px;
     padding: 20px;
