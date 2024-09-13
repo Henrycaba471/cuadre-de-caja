@@ -27,9 +27,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 margin: 0;
                 box-sizing: border-box;
             }
-            body{
-                font-family: Arial, sans-serif;
-            }
             @page{
                 margin: 1cm;
             }
