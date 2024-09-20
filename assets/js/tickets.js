@@ -110,17 +110,15 @@ ${numerosSeparados}
                 margin: 0;
                 box-sizing: border-box;
             }
-            body{
-                font-family: monospace;
-            }
+            
             @page{
-                margin: .69cm;
+                margin: .67cm;
             }
             span{
                 font-size: 10pt;
             }
         </style>
-V:${venderdor.value} &nbsp;&nbsp;&nbsp;Id:${serie.value}<br>
+V:${venderdor.value}&nbsp;&nbsp;&nbsp;Id:${serie.value}<br>
 FV:${fv.value}  Ag:${ag.value}<br>
 F.Sort:${sort.value} Id:${id.value}<br>
 Frm:${frm.value} C:${c.value} P:${p.value}<br>
