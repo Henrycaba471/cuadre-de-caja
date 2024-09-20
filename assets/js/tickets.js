@@ -111,7 +111,7 @@ ${numerosSeparados}
                 box-sizing: border-box;
             }
             body{
-                font-family: 'Courier New';
+                font-family: monospace;
             }
             @page{
                 margin: .69cm;
