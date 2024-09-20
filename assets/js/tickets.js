@@ -109,13 +109,14 @@ ${numerosSeparados}
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
+                font-family: monospace;
             }
             
             @page{
                 margin: .67cm;
             }
             span{
-                font-size: 10pt;
+                font-size: 8pt;
             }
         </style>
 V:${venderdor.value}&nbsp;&nbsp;&nbsp;Id:${serie.value}<br>
